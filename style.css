@@ -1,0 +1,121 @@
+/* General */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 60px; /* Tambahkan padding ini */
+  box-sizing: border-box; /* Gunakan box-sizing ini */
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  align-items: center; /* Menyelaraskan logo dan tombol secara vertikal */
+  justify-content: space-between; /* Memastikan logo di kiri dan tombol di kanan */
+  background-color: #ffffff; /* Warna latar belakang navbar */
+  padding: 10px 20px; /* Padding di dalam navbar */
+}
+
+.navbar-buttons {
+  display: flex; /* Menyusun tombol dalam satu baris */
+}
+
+.navbar-buttons button {
+  background-color: transparent; /* Warna tombol */
+  color: rgb(0, 0, 0); /* Warna teks tombol */
+  border: none; /* Menghilangkan border */
+  padding: 10px 15px; /* Padding tombol */
+  margin-left: 10px; /* Jarak antar tombol */
+  cursor: pointer; /* Menunjukkan bahwa tombol dapat diklik */
+  border-radius: 5px; /* Sudut tombol melengkung */
+  transition: background-color 0.3s; /* Efek transisi */
+}
+
+.navbar-buttons button:hover {
+  background-color: #ffb619; /* Warna tombol saat hover */
+}
+
+.profile-button {
+  background-color: #ffb619; /* Warna tombol profil */
+  color: white; /* Warna teks tombol profil */
+  border: none; /* Menghilangkan border */
+  padding: 10px; /* Padding tombol profil */
+  margin-left: 10px; /* Jarak antar tombol */
+  cursor: pointer; /* Menunjukkan bahwa tombol dapat diklik */
+  border-radius: 50%; /* Membuat tombol berbentuk lingkaran */
+  width: 40px; /* Lebar tombol */
+  height: 40px; /* Tinggi tombol */
+  display: flex; /* Menggunakan flexbox untuk menempatkan ikon di tengah */
+  align-items: center; /* Menyelaraskan ikon secara vertikal */
+  justify-content: center; /* Menyelaraskan ikon secara horizontal */
+  font-size: 20px; /* Ukuran font untuk ikon */
+  transition: background-color 0.3s; /* Efek transisi */
+}
+
+.profile-button:hover {
+  background-color: #ffb619; /* Warna tombol profil saat hover */
+}
+
+/* Logo atas */
+.logo-container {
+  flex: 0 0 auto; /* Mengatur agar logo tidak mengembang */
+}
+
+.logo {
+  height: 40px; /* Atur tinggi logo sesuai kebutuhan */
+}
+
+/* Hero banner */
+.hero-banner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #f0f0f0; /* Warna latar belakang hero banner */
+  padding: 50px; /* Padding di dalam hero banner */
+}
+
+.text-content {
+  flex: 1; /* Mengatur agar konten teks mengambil ruang yang tersedia */
+  margin-right: 20px; /* Jarak antara teks dan gambar */
+  margin-bottom: 20px; /* Tambahkan margin bawah untuk memberi jarak ke tombol */
+  padding-bottom: 20px; /* Tambahkan padding bawah untuk memberi jarak ke tombol */
+}
+
+.text-content h1 {
+  font-size: 2.5em; /* Ukuran font untuk judul */
+  margin-bottom: 20px; /* Jarak bawah judul */
+  line-height: 1.5; /* Jarak antar baris untuk judul */
+}
+
+.text-content p {
+  font-size: 1.2em; /* Ukuran font untuk paragraf */
+  margin-bottom: 40px; /* Jarak bawah paragraf */
+  line-height: 1.5; /* Jarak antar baris untuk paragraf */
+}
+
+.cta-button {
+  background-color: #ffb619; /* Warna tombol CTA */
+  color: white; /* Warna teks tombol CTA */
+  padding: 15px 25px; /* Padding tombol CTA */
+  border: none; /* Menghilangkan border */
+  border-radius: 5px; /* Sudut tombol melengkung */
+  text-decoration: none; /* Menghilangkan garis bawah */
+  font-size: 1.2em; /* Ukuran font untuk tombol CTA */
+  transition: background-color 0.3s; /* Efek transisi */
+  margin-top: 20px; /* Jarak antara teks dan tombol */
+  
+}
+
+.cta-button:hover {
+  background-color: #e0a500; /* Warna tombol CTA saat hover */
+}
+
+.image-content {
+  flex: 1; /* Mengatur agar konten gambar mengambil ruang yang tersedia */
+  margin-top: 20px; /* Jarak antara teks dan gambar */
+  padding-left: 50px;
+}
+
+.image-content img {
+  max-width: 100%; /* Memastikan gambar tidak melebihi lebar kontainer */
+  height: auto; /* Mempertahankan rasio aspek gambar */
+}
