@@ -15,13 +15,15 @@
             <img src="images/logo.png" alt="Logo" class="logo"> <!-- Logo di sini -->
         </div>
         <div class="navbar-buttons">
-            <button>Home</button>
-            <button>Tombol 2</button>
-            <button>Tombol 3</button>
-            <button>Tombol 4</button>
-            <button class="profile-button">👤</button>
+            <button>Beranda</button>
+            <button id="cariBengkelButton">Cari Bengkel</button>
+            <button>Antrian</button>
+            <button>Panduan pengguna</button>
+            <button style="color: #fc4848;" href="">Registrasi</button>
+            <!-- <button class="profile-button">👤</button> -->
         </div>
     </div>
+    <script src="scripts/script-navigasi_navbar.js"></script>
     <script src="scripts/script-navbar_animation.js"></script>
 
     <!-- Hero banner -->
