@@ -12,7 +12,10 @@ body {
   align-items: center; /* Menyelaraskan logo dan tombol secara vertikal */
   justify-content: space-between; /* Memastikan logo di kiri dan tombol di kanan */
   background-color: #ffffff; /* Warna latar belakang navbar */
-  padding: 10px 20px; /* Padding di dalam navbar */
+  padding: -10px 20px; /* Padding di dalam navbar */
+  transition: top 0.3s; /* Efek transisi saat navbar muncul atau menghilang */
+  position: relative; /* Atur posisi navbar */
+  z-index: 1000; /* Memastikan navbar berada di atas konten lainnya */
 }
 
 .navbar-buttons {
@@ -21,21 +24,21 @@ body {
 
 .navbar-buttons button {
   background-color: transparent; /* Warna tombol */
-  color: rgb(0, 0, 0); /* Warna teks tombol */
+  color: rgb(43, 43, 43); /* Warna teks tombol */
   border: none; /* Menghilangkan border */
   padding: 10px 15px; /* Padding tombol */
   margin-left: 10px; /* Jarak antar tombol */
   cursor: pointer; /* Menunjukkan bahwa tombol dapat diklik */
-  border-radius: 5px; /* Sudut tombol melengkung */
+  border-radius: 15px; /* Sudut tombol melengkung */
   transition: background-color 0.3s; /* Efek transisi */
 }
 
 .navbar-buttons button:hover {
-  background-color: #ffb619; /* Warna tombol saat hover */
+  background-color: #f2ff58; /* Warna tombol saat hover */
 }
 
 .profile-button {
-  background-color: #ffb619; /* Warna tombol profil */
+  background-color: #f2ff58; /* Warna tombol profil */
   color: white; /* Warna teks tombol profil */
   border: none; /* Menghilangkan border */
   padding: 10px; /* Padding tombol profil */
@@ -52,7 +55,7 @@ body {
 }
 
 .profile-button:hover {
-  background-color: #ffb619; /* Warna tombol profil saat hover */
+  background-color: #f2ff58; /* Warna tombol profil saat hover */
 }
 
 /* Logo atas */
@@ -61,7 +64,8 @@ body {
 }
 
 .logo {
-  height: 40px; /* Atur tinggi logo sesuai kebutuhan */
+  height: 100px; /* Atur tinggi logo sesuai kebutuhan */
+  width: auto; /* Mempertahankan rasio aspek */
 }
 
 /* Hero banner */
@@ -69,7 +73,7 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #f0f0f0; /* Warna latar belakang hero banner */
+  background-color: #ffffff; /* Warna latar belakang hero banner */
   padding: 50px; /* Padding di dalam hero banner */
 }
 
@@ -81,23 +85,23 @@ body {
 }
 
 .text-content h1 {
-  font-size: 2.5em; /* Ukuran font untuk judul */
+  font-size: 2em; /* Ukuran font untuk judul */
   margin-bottom: 20px; /* Jarak bawah judul */
   line-height: 1.5; /* Jarak antar baris untuk judul */
 }
 
 .text-content p {
-  font-size: 1.2em; /* Ukuran font untuk paragraf */
+  font-size: 1em; /* Ukuran font untuk paragraf */
   margin-bottom: 40px; /* Jarak bawah paragraf */
   line-height: 1.5; /* Jarak antar baris untuk paragraf */
 }
 
 .cta-button {
-  background-color: #ffb619; /* Warna tombol CTA */
-  color: white; /* Warna teks tombol CTA */
+  background-color: #2c7ede; /* Warna tombol CTA */
+  color: rgb(255, 255, 255); /* Warna teks tombol CTA */
   padding: 15px 25px; /* Padding tombol CTA */
   border: none; /* Menghilangkan border */
-  border-radius: 5px; /* Sudut tombol melengkung */
+  border-radius: 15px; /* Sudut tombol melengkung */
   text-decoration: none; /* Menghilangkan garis bawah */
   font-size: 1.2em; /* Ukuran font untuk tombol CTA */
   transition: background-color 0.3s; /* Efek transisi */
@@ -106,9 +110,10 @@ body {
 }
 
 .cta-button:hover {
-  background-color: #e0a500; /* Warna tombol CTA saat hover */
+  background-color: #2770c4; /* Warna tombol CTA saat hover */
 }
 
+/* image dalam hero banner */
 .image-content {
   flex: 1; /* Mengatur agar konten gambar mengambil ruang yang tersedia */
   margin-top: 20px; /* Jarak antara teks dan gambar */
@@ -118,4 +123,210 @@ body {
 .image-content img {
   max-width: 100%; /* Memastikan gambar tidak melebihi lebar kontainer */
   height: auto; /* Mempertahankan rasio aspek gambar */
+  border-radius: 15px;
+}
+
+
+/* Banner Baru */
+.new-banner {
+  background-color: #ffffff; /* Warna latar belakang banner */
+  padding: 50px; /* Padding di dalam banner */
+}
+
+.grid-container {
+  display: grid; /* Menggunakan grid layout */
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Mengatur kolom grid */
+  gap: 20px; /* Jarak antar item grid */
+}
+
+.grid-item {
+  background-color: rgb(236, 241, 248); /* Warna latar belakang item grid */
+  border-radius: 15px; /* Sudut melengkung */
+  padding: 20px; /* Padding di dalam item grid */
+  text-align: center; /* Menyelaraskan teks di tengah */
+ 
+}
+
+.grid-icon {
+  max-width: 100px; /* Ukuran maksimum untuk ikon */
+  height: auto; /* Mempertahankan rasio aspek */
+  margin-bottom: 15px; /* Jarak bawah untuk ikon */
+}
+
+.grid-item h3 {
+  font-size: 1.5em; /* Ukuran font untuk judul */
+  margin-bottom: 10px; /* Jarak bawah judul */
+}
+
+.grid-item p {
+  font-size: 1em; /* Ukuran font untuk deskripsi */
+  color: rgb(43, 43, 43); /* Warna teks deskripsi */
+}
+
+/* Hero Banner 2 */
+.hero-banner-2 {
+  display: flex; /* Menggunakan flexbox untuk tata letak */
+  align-items: center; /* Menyelaraskan konten secara vertikal */
+  justify-content: space-between; /* Menyebar konten di antara dua sisi */
+  padding: 50px; /* Padding di dalam hero banner */
+  margin-top: 20px; /* Jarak atas dari elemen di atas */
+}
+
+
+.text-content {
+  flex: 1; /* Mengatur teks untuk mengambil ruang yang sama */
+  padding-left: 20px; /* Memberikan jarak antara gambar dan teks */
+}
+
+
+.image-content {
+  flex: 1; /* Mengatur gambar untuk mengambil ruang yang sama */
+  margin-top: 20px; /* Jarak antara teks dan gambar */
+  padding-right: 50px;
+}
+
+.hero-banner-2 img {
+  max-width: 100%; /* Memastikan gambar responsif */
+  height: auto; /* Memastikan tinggi gambar otomatis */
+  border-radius: 15px; /* Menambahkan sudut melengkung pada gambar */
+}
+
+
+/* Slider header */
+.slider-header {
+  text-align: auto; /* Pusatkan teks */
+  margin-bottom: 10px; /* Jarak antara header dan slider */
+  margin-top: 25px;
+  margin-left: 50px;
+}
+
+.slider-header h2 {
+  font-size: 24px; /* Ukuran font untuk header */
+  color: #333; /* Warna teks */
+  margin: 0; /* Hapus margin default */
+}
+
+/* image slider */
+.slider {
+  position: relative;
+  max-width: 800px; /* Atur lebar maksimum slider */
+  margin: auto; /* Pusatkan slider */
+  overflow: hidden; /* Sembunyikan bagian yang melampaui batas */
+  margin-top: 30px;
+  
+}
+
+.slides {
+  display: flex; /* Menggunakan flexbox untuk tata letak horizontal */
+  transition: transform 0.5s cubic-bezier(0.68, -0.55, 0.27, 1.55); /* Animasi bouncy */
+}
+
+.slide {
+  min-width: 100%; /* Setiap slide mengambil lebar penuh slider */
+  height: 400px; /* Atur tinggi slide sesuai dengan tinggi banner */
+  display: flex; /* Menggunakan flexbox untuk menempatkan gambar */
+  justify-content: center; /* Pusatkan gambar secara horizontal */
+  align-items: center; /* Pusatkan gambar secara vertikal */
+}
+
+.slide img {
+  width: 100%; /* Gambar responsif */
+  height: 100%; /* Gambar mengisi tinggi slide */
+  object-fit: cover; /* Memastikan gambar mengisi area tanpa merusak rasio aspek */
+  border-radius: 10px; /* Sudut melengkung pada gambar */
+}
+
+.navigation {
+  text-align: center; /* Pusatkan navigasi */
+  margin-top: 10px; /* Jarak atas untuk navigasi */
+}
+
+.dot {
+  height: 15px;
+  width: 15px;
+  margin: 0 5px;
+  background-color: #bbb; /* Warna default untuk dot */
+  border-radius: 50%; /* Bentuk lingkaran */
+  display: inline-block;
+  cursor: pointer; /* Tunjukkan kursor pointer saat hover */
+}
+
+.dot.active {
+  background-color: #717171; /* Warna aktif untuk dot */
+}
+
+button.prev, button.next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(255, 255, 255, 0.8); /* Latar belakang semi-transparan */
+  border: none;
+  cursor: pointer;
+  padding: 10px;
+  border-radius: 5px;
+  z-index: 10; /* Pastikan tombol berada di atas slide */
+}
+
+button.prev {
+  left: 10px; /* Posisi tombol sebelumnya */
+}
+
+button.next {
+  right: 10px; /* Posisi tombol berikutnya */
+}
+
+
+/*  footer */
+.footer {
+  background-color: rgb(236, 241, 248); /* Warna latar belakang footer */
+  padding: 40px 20px; /* Padding di dalam footer */
+  text-align: left; /* Rata kiri untuk teks */
+  color: rgb(43, 43, 43);
+  margin-top: 25px; 
+  border-radius: 15px;
+}
+
+.footer-container {
+  display: flex; /* Menggunakan flexbox untuk tata letak */
+  justify-content: space-between; /* Menyebar elemen di antara kiri dan kanan */
+}
+
+.footer-section {
+  flex: 1; /* Mengatur agar setiap bagian footer mengambil ruang yang sama */
+  margin: 0 20px; /* Jarak antar bagian */
+}
+
+.footer-section h3 {
+  font-size: 1.5em; /* Ukuran font untuk judul bagian */
+  margin-bottom: 10px; /* Jarak bawah judul */
+}
+
+.footer-section p, .footer-section ul {
+  font-size: 1em; /* Ukuran font untuk teks */
+  margin-bottom: 10px; /* Jarak bawah untuk teks */
+}
+
+.footer-section ul {
+  list-style-type: none; /* Menghilangkan bullet pada list */
+  padding: 0; /* Menghilangkan padding default */
+}
+
+.footer-section ul li {
+  margin-bottom: 5px; /* Jarak antar item list */
+}
+
+.footer-section ul li a {
+  text-decoration: none; /* Menghilangkan garis bawah pada link */
+  color: rgb(43, 43, 43); /* Warna teks link */
+}
+
+.footer-section ul li a:hover {
+  text-decoration: underline; /* Garis bawah saat hover */
+}
+
+.footer-bottom {
+  text-align: center; /* Pusatkan teks di bagian bawah footer */
+  margin-top: 50px; /* Jarak atas untuk footer bottom */
+  font-size: 0.9em; /* Ukuran font untuk footer bottom */
+  color: rgb(43, 43, 43); /* Warna teks untuk footer bottom */
 }
