@@ -15,14 +15,14 @@
             <img src="images/logo.png" alt="Logo" class="logo"> <!-- Logo di sini -->
         </div>
         <div class="navbar-buttons">
-            <button>Tombol 1</button>
+            <button>Home</button>
             <button>Tombol 2</button>
             <button>Tombol 3</button>
             <button>Tombol 4</button>
             <button class="profile-button">👤</button>
         </div>
     </div>
-    <script src="script-navbar_animation.js"></script>
+    <script src="scripts/script-navbar_animation.js"></script>
 
     <!-- Hero banner -->
     <section class="hero-banner">
@@ -31,7 +31,7 @@
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 
             </p>
-            <a href="#register-banner" class="cta-button">Selengkapnya</a>
+            <a href="#register-banner" class="cta-button">Daftar sekarang</a>
         </div>
         <div class="image-content">
             <img src="images/hero_image.png" alt="Gambar Stock" />
@@ -72,7 +72,7 @@
         <div class="text-content">
             <h1>Selamat Datang di Hero Banner 2!</h1>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-            <a href="#register-banner" class="cta-button">Selengkapnya</a>
+            <a href="#register-banner" class="cta-button">Bergabung</a>
         </div>
     </section>
 
@@ -102,11 +102,11 @@
         <button class="prev" onclick="changeSlide(-1)">&#10094;</button>
         <button class="next" onclick="changeSlide(1)">&#10095;</button>
     </div>
-    <script src="script-image_slider.js"></script>
+    <script src="scripts/script-image_slider.js"></script>
 
 </body>
 
-<style></style>
+<!-- Footer -->
 <footer class="footer">
     <div class="footer-container">
         <div class="footer-section">
