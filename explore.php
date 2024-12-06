@@ -22,21 +22,44 @@
             <!-- <button class="profile-button">👤</button> -->
         </div>
     </div>
-    <script src="scripts/script-navigasi_navbar.js"></script>
     <script src="scripts/script-navbar_animation.js"></script>
 
-      <!-- Hero banner -->
-      <section class="hero-banner">
-        <div class="text-content">
-            <h1>Selamat Datang di Website Kami!</h1>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 
-            </p>
-            <a href="#register-banner" class="cta-button">Daftar sekarang</a>
-        </div>
-        <div class="image-content">
-            <img src="images/hero_image.png" alt="Gambar Stock" />
-        </div>
-    </section>
+
+    <div class="container">
+    <!-- Search Bar -->
+    <div class="search-bar">
+      <input type="text" placeholder="Cari bengkel...">
+      <button>Filter</button>
+    </div>
+
+    <!-- Content -->
+    <div class="content">
+      <!-- Left Filter -->
+      <div class="filter">
+        <p>Filter Kiri</p>
+      </div>
+
+      <!-- Results -->
+      <div class="results">
+        <div class="result-item">Bengkel 1</div>
+        <div class="result-item">Bengkel 2</div>
+        <div class="result-item">Bengkel 3</div>
+        <div class="result-item">Bengkel 4</div>
+        <div class="result-item">Bengkel 5</div>
+        <div class="result-item">Bengkel 6</div>
+        <div class="result-item">Bengkel 7</div>
+        <div class="result-item">Bengkel 8</div>
+      </div>
+
+      <!-- Right Filter -->
+      <div class="right-filter">
+        <p>Filter Kanan</p>
+      </div>
+    </div>
+  </div>
+
+    <script src="scripts/script-navigasi_navbar.js"></script>
+
 
 </body>
