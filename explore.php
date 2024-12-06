@@ -22,14 +22,17 @@
     </div>
     <script src="scripts/script-navbar_animation.js"></script>
 
+
+
+    <!-- Search Bar -->
+    <div class="search-bar">
+        <form action="explore.php" method="get" style="width: 100%;">
+            <input type="text" id="searchInput" name="q" placeholder="Cari bengkel...">
+            <button type="submit">Cari</button>
+        </form>
+    </div>
+
     <div class="container">
-        <!-- Search Bar -->
-        <div class="search-bar">
-            <form action="explore.php" method="get">
-                <input type="text" id="searchInput" name="q" placeholder="Cari bengkel...">
-                <button type="submit">Filter</button>
-            </form>
-        </div>
 
         <!-- Content -->
         <div class="content">

@@ -349,28 +349,33 @@ button.next {
 /* searchbar cari bengkel */
 .search-bar {
   display: flex;
-  width: 100%;
-  max-width: 1200px;
-  margin-bottom: 20px;
-  gap: 10px;
+  width: 100%; /* Memastikan search bar mengambil lebar penuh */
+  max-width: 1200px; /* Lebar maksimum untuk search bar */
+  margin: 0px auto;
+  margin-top: 20px; 
+  margin-bottom: -10px;
+  gap: 10px; /* Jarak antara input dan tombol */
 }
 
 .search-bar input[type="text"] {
-  flex: 1;
-  padding: 10px;
-  font-size: 16px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
+  flex: 1; /* Mengatur agar input mengambil ruang yang tersedia */
+  padding: 10px; /* Padding di dalam input */
+  font-size: 16px; /* Ukuran font untuk input */
+  border: 1px solid #ccc; /* Garis batas */
+  border-radius: 5px; /* Sudut melengkung */
+  box-sizing: border-box; /* Memastikan padding dan border dihitung dalam lebar */
+  min-width: 93.8%; /* Menetapkan lebar minimum untuk input */
+  max-width: 100%; /* Memastikan input tidak melebihi lebar kontainer */
 }
 
 .search-bar button {
-  padding: 10px 20px;
-  font-size: 16px;
-  border: none;
-  background-color: #007bff;
-  color: white;
-  border-radius: 5px;
-  cursor: pointer;
+  padding: 10px 20px; /* Padding di dalam tombol */
+  font-size: 16px; /* Ukuran font untuk tombol */
+  border: none; /* Menghilangkan border */
+  background-color: #007bff; /* Warna latar belakang tombol */
+  color: white; /* Warna teks tombol */
+  border-radius: 5px; /* Sudut melengkung */
+  cursor: pointer; /* Menunjukkan bahwa tombol dapat diklik */
 }
 
 .search-bar button:hover {
