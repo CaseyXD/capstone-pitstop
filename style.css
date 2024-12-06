@@ -131,12 +131,17 @@ body {
 .new-banner {
   background-color: #ffffff; /* Warna latar belakang banner */
   padding: 50px; /* Padding di dalam banner */
+  display: flex; /* Menggunakan flexbox untuk tata letak */
+  justify-content: center; /* Memusatkan konten secara horizontal */
+  align-items: center; /* Memusatkan konten secara vertikal */
 }
 
 .grid-container {
   display: grid; /* Menggunakan grid layout */
   grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Mengatur kolom grid */
   gap: 20px; /* Jarak antar item grid */
+  max-width: 1200px; /* Atur lebar maksimum grid */
+  width: 100%; /* Memastikan grid mengambil lebar penuh */
 }
 
 .grid-item {
@@ -331,6 +336,8 @@ button.next {
   color: rgb(43, 43, 43); /* Warna teks untuk footer bottom */
 }
 
+
+
 /* Halaman Cari bengkel */
 .container {
   display: flex;
@@ -339,6 +346,7 @@ button.next {
   padding: 20px;
 }
 
+/* searchbar cari bengkel */
 .search-bar {
   display: flex;
   width: 100%;
@@ -377,22 +385,54 @@ button.next {
   max-width: 1200px;
 }
 
-.filter,
-.results {
-  background-color: #ffffff;
-  padding: 15px;
-  border-radius: 10px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+
+/* Filter kiri */
+.filter-kiri {
+  background-color: #ffffff; /* Warna latar belakang */
+  padding: 15px; /* Padding di dalam filter */
+  border-radius: 10px; /* Sudut melengkung */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Bayangan untuk efek kedalaman */
 }
 
-.filter {
-  height: auto;
+.filter-kiri h3 {
+  margin-bottom: 10px; /* Jarak bawah untuk judul */
 }
 
+.filter-kiri label {
+  display: block; /* Menampilkan label sebagai blok */
+  margin-bottom: 5px; /* Jarak bawah untuk label */
+}
+
+.filter-kiri select {
+  width: 100%; /* Lebar penuh untuk dropdown */
+  padding: 10px; /* Padding di dalam dropdown */
+  margin-bottom: 10px; /* Jarak bawah untuk dropdown */
+  border: 1px solid #ccc; /* Garis batas */
+  border-radius: 5px; /* Sudut melengkung */
+}
+
+.filter-kiri button {
+  padding: 10px 20px; /* Padding di dalam tombol */
+  font-size: 16px; /* Ukuran font untuk tombol */
+  border: none; /* Menghilangkan border */
+  background-color: #007bff; /* Warna latar belakang tombol */
+  color: white; /* Warna teks tombol */
+  border-radius: 5px; /* Sudut melengkung */
+  cursor: pointer; /* Menunjukkan bahwa tombol dapat diklik */
+}
+
+.filter-kiri button:hover {
+  background-color: #0056b3; /* Warna tombol saat hover */
+}
+
+/* Hasil pencarian juga */
 .results {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-  gap: 15px;
+  gap: 15px;  background-color: #ffffff;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 .result-item {
@@ -407,12 +447,43 @@ button.next {
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
+/* Filter kanan */
 .right-filter {
-  background-color: #ffffff;
-  height: auto;
-  padding: 15px;
-  border-radius: 10px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  background-color: #ffffff; /* Warna latar belakang */
+  padding: 15px; /* Padding di dalam filter */
+  border-radius: 10px; /* Sudut melengkung */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Bayangan untuk efek kedalaman */
+}
+
+.right-filter h3 {
+  margin-bottom: 10px; /* Jarak bawah untuk judul */
+}
+
+.right-filter label {
+  display: block; /* Menampilkan label sebagai blok */
+  margin-bottom: 5px; /* Jarak bawah untuk label */
+}
+
+.right-filter select {
+  width: 100%; /* Lebar penuh untuk dropdown */
+  padding: 10px; /* Padding di dalam dropdown */
+  margin-bottom: 10px; /* Jarak bawah untuk dropdown */
+  border: 1px solid #ccc; /* Garis batas */
+  border-radius: 5px; /* Sudut melengkung */
+}
+
+.right-filter button {
+  padding: 10px 20px; /* Padding di dalam tombol */
+  font-size: 16px; /* Ukuran font untuk tombol */
+  border: none; /* Menghilangkan border */
+  background-color: #007bff; /* Warna latar belakang tombol */
+  color: white; /* Warna teks tombol */
+  border-radius: 5px; /* Sudut melengkung */
+  cursor: pointer; /* Menunjukkan bahwa tombol dapat diklik */
+}
+
+.right-filter button:hover {
+  background-color: #0056b3; /* Warna tombol saat hover */
 }
 
 @media (max-width: 768px) {
@@ -423,5 +494,37 @@ button.next {
   .filter,
   .right-filter {
     display: none;
+  }
+}
+
+/* Grid Container Pencarian */
+.grid-container-pencarian {
+  display: grid; /* Menggunakan grid layout */
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Mengatur kolom grid */
+  gap: 20px; /* Jarak antar item */
+  padding: 20px; /* Padding di dalam grid container */
+}
+
+/* Grid Item Pencarian */
+.grid-item-pencarian {
+  background-color: #ffffff; /* Warna latar belakang item */
+  padding: 15px; /* Ruang dalam item */
+  text-align: center; /* Rata tengah teks */
+  border: 1px solid #ddd; /* Garis batas item */
+  border-radius: 10px; /* Sudut melengkung */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Bayangan untuk efek kedalaman */
+  transition: transform 0.2s; /* Efek transisi saat hover */
+}
+
+/* Efek Hover untuk Grid Item */
+.grid-item-pencarian:hover {
+  transform: translateY(-5px); /* Mengangkat item saat hover */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Bayangan lebih dalam saat hover */
+}
+
+/* Responsivitas */
+@media (max-width: 768px) {
+  .grid-container-pencarian {
+      grid-template-columns: 1fr; /* Satu kolom pada layar kecil */
   }
 }
