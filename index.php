@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hero Banner</title>
+    <title>Pitstop</title>
     <link rel="stylesheet" href="style.css">
     
 </head>
@@ -19,7 +19,7 @@
             <button id="cariBengkelButton">Cari Bengkel</button>
             <button>Antrian</button>
             <button>Panduan pengguna</button>
-            <button style="color: #fc4848;" href="">Registrasi</button>
+            <button style="color: #fc4848;" id="">Registrasi</button>
             <!-- <button class="profile-button">👤</button> -->
         </div>
     </div>
@@ -29,8 +29,8 @@
     <!-- Hero banner -->
     <section class="hero-banner">
         <div class="text-content">
-            <h1>Selamat Datang di Website Kami!</h1>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+            <h1>Selamat Datang di Pitstop!</h1>
+         <p>Pitstop adalah solusi buat Kamu yang ga mau ribet buat servis kendaraan Kamu. Cukup buka website Pitstop, Kamu bisa cari mekanik pakai gadget Kamu, kapan saja dan dimana saja. Cocok buat kamu yang sayang sama kendaraan Kamu. Cukup booking servis dan hubungi bengkel, Kamu ga perlu susah-susah datang ke lokasi, tinggal antri lalu dilayani.
 
             </p>
             <a href="#register-banner" class="cta-button">Daftar sekarang</a>
@@ -45,23 +45,23 @@
         <div class="grid-container">
             <div class="grid-item">
                 <img src="images/icon1.png" alt="Icon 1" class="grid-icon">
-                <h3>Judul 1</h3>
-                <p>Deskripsi singkat tentang fitur atau layanan 1.</p>
+                <h3>1. Cari bengkel</h3>
+                <p>Mencari mekanik pilihan dengan melihat profil mereka</p>
             </div>
             <div class="grid-item">
                 <img src="images/icon2.png" alt="Icon 2" class="grid-icon">
-                <h3>Judul 2</h3>
-                <p>Deskripsi singkat tentang fitur atau layanan 2.</p>
+                <h3>2. Booking</h3>
+                <p>Isi formulir singkat untuk booking servis</p>
             </div>
             <div class="grid-item">
                 <img src="images/icon3.png" alt="Icon 3" class="grid-icon">
-                <h3>Judul 3</h3>
-                <p>Deskripsi singkat tentang fitur atau layanan 3.</p>
+                <h3>3. Antri</h3>
+                <p>Jangan lupa antri sesuai nomor ya!</p>
             </div>
             <div class="grid-item">
                 <img src="images/icon4.png" alt="Icon 4" class="grid-icon">
-                <h3>Judul 4</h3>
-                <p>Deskripsi singkat tentang fitur atau layanan 4.</p>
+                <h3>4. Dilayani</h3>
+                <p>Datang langsung ke bengkel pilihan</p>
             </div>
         </div>
     </section>
@@ -72,8 +72,10 @@
             <img src="images/hero_image_2.png" alt="Gambar Hero Banner 2" />
         </div>
         <div class="text-content">
-            <h1>Selamat Datang di Hero Banner 2!</h1>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            <h1>Apa saja benefit Pitstop?</h1>
+            <p>
+                Mencari bengkel itu ga mudah. Seringkali udah dapat yang bagus, ternyata diporotin. Tenang, dengan Pitstop, Kamu bisa membandingkan mekanik 1 dengan yang lainnya. Lewat fitur profile bengkel dan review pelanggan, Kamu bisa jadiin referensi sebelum memesan. Ga hanya itu, fitur booking online nya juga mudah. Cukup cari bengkel, klik booking, lalu isi form singkat booking deh! Kamu ga perlu datang kesana untuk menunggu, tinggal datang saja kalo sudah giliranmu.
+            </p>
             <a href="#register-banner" class="cta-button">Bergabung</a>
         </div>
     </section>
@@ -113,7 +115,9 @@
     <div class="footer-container">
         <div class="footer-section">
             <h3>About Us</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            <p> 
+            Pitstop hadir sebagai platform manajemen bengkel yang inovatif dan terpercaya. Kami menawarkan solusi digital lengkap untuk mempermudah pengelolaan operasional bengkel, mulai dari layanan pelanggan hingga pengelolaan inventaris. Dengan teknologi modern dan antarmuka yang ramah pengguna, kami berkomitmen membantu bisnis bengkel Anda berkembang lebih cepat dan efisien.
+            </p>
         </div>
         <div class="footer-section">
             <h3>Quick Links</h3>
@@ -136,3 +140,4 @@
 </footer>
 
 </html>
+

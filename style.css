@@ -2,7 +2,7 @@
 body {
   font-family: Arial, sans-serif;
   margin: 0;
-  padding: 60px; /* Tambahkan padding ini */
+  padding: 0px; /* Tambahkan padding ini */
   box-sizing: border-box; /* Gunakan box-sizing ini */
 }
 
@@ -12,7 +12,7 @@ body {
   align-items: center; /* Menyelaraskan logo dan tombol secara vertikal */
   justify-content: space-between; /* Memastikan logo di kiri dan tombol di kanan */
   background-color: #ffffff; /* Warna latar belakang navbar */
-  padding: -10px 20px; /* Padding di dalam navbar */
+  padding: 20px 60px; /* Padding di dalam navbar */
   transition: top 0.3s; /* Efek transisi saat navbar muncul atau menghilang */
   position: relative; /* Atur posisi navbar */
   z-index: 1000; /* Memastikan navbar berada di atas konten lainnya */
@@ -283,12 +283,12 @@ button.next {
 
 /*  footer */
 .footer {
-  background-color: rgb(236, 241, 248); /* Warna latar belakang footer */
+  background-color: #007bff; /* Warna latar belakang footer */
   padding: 40px 20px; /* Padding di dalam footer */
   text-align: left; /* Rata kiri untuk teks */
-  color: rgb(43, 43, 43);
+  color: rgb(255, 255, 255);
   margin-top: 25px; 
-  border-radius: 15px;
+  
 }
 
 .footer-container {
@@ -299,6 +299,7 @@ button.next {
 .footer-section {
   flex: 1; /* Mengatur agar setiap bagian footer mengambil ruang yang sama */
   margin: 0 20px; /* Jarak antar bagian */
+  
 }
 
 .footer-section h3 {
@@ -322,7 +323,7 @@ button.next {
 
 .footer-section ul li a {
   text-decoration: none; /* Menghilangkan garis bawah pada link */
-  color: rgb(43, 43, 43); /* Warna teks link */
+  color: rgb(255, 255, 255); /* Warna teks link */
 }
 
 .footer-section ul li a:hover {
@@ -333,7 +334,7 @@ button.next {
   text-align: center; /* Pusatkan teks di bagian bawah footer */
   margin-top: 50px; /* Jarak atas untuk footer bottom */
   font-size: 0.9em; /* Ukuran font untuk footer bottom */
-  color: rgb(43, 43, 43); /* Warna teks untuk footer bottom */
+  color: rgb(255, 255, 255); /* Warna teks untuk footer bottom */
 }
 
 
