@@ -535,4 +535,63 @@ button.next {
   }
 }
 
+
 /* Form Login */
+.center-text {
+  text-align: center; /* Memusatkan teks */
+}
+
+.login-form {
+  background-color: #ffffff; /* Warna latar belakang form */
+  border-radius: 10px; /* Sudut melengkung */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Bayangan untuk efek kedalaman */
+  padding: 20px; /* Padding di dalam form */
+  max-width: 400px; /* Lebar maksimum form */
+  margin: 20px auto; /* Margin untuk memusatkan form */
+}
+
+.login-form label {
+  display: block; /* Menampilkan label sebagai blok */
+  margin-bottom: 5px; /* Jarak bawah untuk label */
+  font-weight: bold; /* Menebalkan teks label */
+}
+
+.login-form input[type="text"],
+.login-form input[type="password"] {
+  width: 100%; /* Lebar penuh untuk input */
+  padding: 10px; /* Padding di dalam input */
+  margin-bottom: 15px; /* Jarak bawah untuk input */
+  border: 1px solid #ccc; /* Garis batas */
+  border-radius: 5px; /* Sudut melengkung */
+  box-sizing: border-box; /* Memastikan padding dan border dihitung dalam lebar */
+  font-size: 16px; /* Ukuran font untuk input */
+}
+
+.login-form button {
+  background-color: #007bff; /* Warna latar belakang tombol */
+  color: white; /* Warna teks tombol */
+  padding: 10px 15px; /* Padding di dalam tombol */
+  border: none; /* Menghilangkan border */
+  border-radius: 5px; /* Sudut melengkung */
+  cursor: pointer; /* Menunjukkan bahwa tombol dapat diklik */
+  font-size: 16px; /* Ukuran font untuk tombol */
+  transition: background-color 0.3s; /* Efek transisi */
+}
+
+.login-form button:hover {
+  background-color: #0056b3; /* Warna tombol saat hover */
+}
+
+.login-form p {
+  text-align: center; /* Pusatkan teks */
+  margin-top: 15px; /* Jarak atas untuk teks */
+}
+
+.login-form a {
+  color: #007bff; /* Warna link */
+  text-decoration: none; /* Menghilangkan garis bawah */
+}
+
+.login-form a:hover {
+  text-decoration: underline; /* Garis bawah saat hover */
+}
