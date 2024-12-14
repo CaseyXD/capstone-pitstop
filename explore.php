@@ -70,7 +70,7 @@ if (!isset($_SESSION['username'])) {
         </div>
 
     <!-- Results -->
-    <div class="results" id="results">
+        <div class="results" id="results">
         <?php
         include 'config.php'; // Menghubungkan file koneksi database
 
@@ -79,7 +79,7 @@ if (!isset($_SESSION['username'])) {
             $searchQuery = $_GET['q'];
 
             // Query untuk mencari data bengkel
-            $sql = "SELECT nama FROM bengkel WHERE nama LIKE ?";
+            $sql = "SELECT id, nama FROM bengkel WHERE nama LIKE ?";
             $stmt = $conn->prepare($sql);
             $searchQuery = "%" . $searchQuery . "%";
             $stmt->bind_param("s", $searchQuery);
@@ -92,7 +92,11 @@ if (!isset($_SESSION['username'])) {
             if ($result->num_rows > 0) {
                 echo "<div class='grid-container-pencarian'>";
                 while ($row = $result->fetch_assoc()) {
-                    echo "<div class='grid-item-pencarian'>" . htmlspecialchars($row["nama"]) . "</div>";
+                    // Tambahkan link ke booking.php dengan bengkel_id sebagai parameter
+                    echo "<div class='grid-item-pencarian'>";
+                    echo "<a href='booking.php?bengkel_id=" . htmlspecialchars($row["id"]) . "'>" . htmlspecialchars($row["nama"]) . "</a>";
+                    echo "<br><strong>Bengkel ID:</strong> <a href='booking.php?bengkel_id=" . htmlspecialchars($row["id"]) . "'>" . htmlspecialchars($row["id"]) . "</a>";
+                    echo "</div>";
                 }
                 echo "</div>";
             } else {
@@ -103,14 +107,18 @@ if (!isset($_SESSION['username'])) {
             $stmt->close();
         } else {
             // Jika tidak ada pencarian, tampilkan semua bengkel
-            $sql = "SELECT nama FROM bengkel";
+            $sql = "SELECT id, nama FROM bengkel";
             $result = $conn->query($sql);
 
             // Tampilkan semua bengkel dalam grid
             if ($result->num_rows > 0) {
                 echo "<div class='grid-container-pencarian'>";
                 while ($row = $result->fetch_assoc()) {
-                    echo "<div class='grid-item-pencarian'>" . htmlspecialchars($row["nama"]) . "</div>";
+                    // Tambahkan link ke booking.php dengan bengkel_id sebagai parameter
+                    echo "<div class='grid-item-pencarian'>";
+                    echo "<a href='booking.php?bengkel_id=" . htmlspecialchars($row["id"]) . "'>" . htmlspecialchars($row["nama"]) . "</a>";
+                    echo "<br><strong>Bengkel ID:</strong> <a href='booking.php?bengkel_id=" . htmlspecialchars($row["id"]) . "'>" . htmlspecialchars($row["id"]) . "</a>";
+                    echo "</div>";
                 }
                 echo "</div>";
             } else {

@@ -9,6 +9,7 @@ if (!isset($_SESSION['username']) || !in_array($_SESSION['role'], ['bengkel', 'a
 
 // Menghubungkan file koneksi database
 require_once 'config.php';
+require_once 'process_booking.php';
 
 // Cek koneksi
 if ($conn->connect_error) {
@@ -53,7 +54,7 @@ $queue = $resultQueue->fetch_all(MYSQLI_ASSOC);
         </div>
     </div>
 
-    <div class="dashboard"> <!-- Added dashboard class here -->
+    <div class="dashboard">
         <h2 class="center-text">Dashboard Bengkel</h2>
 
         <div class="container">
@@ -65,12 +66,9 @@ $queue = $resultQueue->fetch_all(MYSQLI_ASSOC);
                             <li>
                                 <strong>Nama Pelanggan:</strong> <?= htmlspecialchars($booking['customer_name']) ?><br>
                                 <strong>Hari:</strong> <?= htmlspecialchars($booking['booking_date']) ?><br>
-                                <strong>Jam:</strong> <?= htmlspecialchars($booking['booking_time']) ?><br>
-                                <form method="POST" action="process_booking.php">
-                                    <input type="hidden" name="booking_id" value="<?= $booking['id'] ?>">
-                                    <button type="submit" name="action" value="accept">Terima</button>
-                                    <button type="submit" name="action" value="reject">Tolak</button>
-                                </form>
+                                < strong>Nama Kendaraan:</strong> <?= htmlspecialchars($booking['vehicle_name']) ?><br>
+                                <strong>Tipe Kendaraan:</strong> <?= htmlspecialchars($booking['vehicle_type']) ?><br>
+                                <strong>Status:</strong> <?= htmlspecialchars($booking['status']) ?><br>
                             </li>
                         <?php endforeach; ?>
                     </ul>
@@ -80,37 +78,25 @@ $queue = $resultQueue->fetch_all(MYSQLI_ASSOC);
             </div>
 
             <div class="queue">
-                <h3>Antrian Saat Ini</h3>
-                <ul>
-                    <?php if (!empty($queue)): ?>
+                <h3>Antrian</h3>
+                <?php if (!empty($queue)): ?>
+                    <ul>
                         <?php foreach ($queue as $item): ?>
                             <li>
                                 <strong>Nomor Antrian:</strong> <?= htmlspecialchars($item['queue_number']) ?><br>
                                 <strong>Nama Pelanggan:</strong> <?= htmlspecialchars($item['customer_name']) ?><br>
-                                <strong>ID Booking:</strong> <?= htmlspecialchars($item['booking_id']) ?><br>
                             </li>
                         <?php endforeach; ?>
-                    <?php else: ?>
-                        <p>Tidak ada antrian saat ini.</p>
-                    <?php endif; ?>
-                </ul>
+                    </ul>
+                <?php else: ?>
+                    <p>Tidak ada antrian saat ini.</p>
+                <?php endif; ?>
             </div>
         </div>
 
-        <!-- User Profile Link -->
-        <div class="user-profile">
-            <p>
-                <strong>
-                    <a href="profile-bengkel.php" style="text-decoration: none; color: #007bff;">
-                        <?= htmlspecialchars($_SESSION['username']) ?> (Bengkel)
-                    </a>
-                </strong>
-            </p>
-        </div>
+        <footer>
+            <p>&copy; 2024 Bengkel Management System. All rights reserved.</p>
+        </footer>
     </div>
-
-    <footer>
-        <p>&copy; 2024 Bengkel Management System . All rights reserved.</p>
-    </footer>
 </body>
 </html>
