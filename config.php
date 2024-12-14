@@ -1,8 +1,17 @@
 <?php
-$host = "localhost"; // Nama host
-$user = "root";      // Nama pengguna database
-$password = "";      // Password database
-$dbname = "pitstop"; // Ganti dengan nama database Anda
+// Membaca file .env
+$env = file('.env', FILE_IGNORE_NEW_LINES | FILE_SKIP_EMPTY_LINES);
+$config = [];
+foreach ($env as $line) {
+    list($key, $value) = explode('=', $line, 2);
+    $config[trim($key)] = trim($value);
+}
+
+// Mengatur variabel koneksi database
+$host = $config['DB_HOST'];
+$user = $config['DB_USER'];
+$password = $config['DB_PASS'];
+$dbname = $config['DB_NAME'];
 
 // Koneksi ke database
 $conn = new mysqli($host, $user, $password, $dbname);
