@@ -71,7 +71,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     <h2 class="center-text">Login</h2>
     <?php if (!empty($error)) echo "<p style='color:red;'>$error</p>"; ?>
     <form method="POST" action="" class="login-form">
-        <label for="username">Username:</label>
+        <label for="username">Username: Email</label>
         <input type="text" id="username" name="username" required>
         <br>
         <label for="password">Password:</label>
