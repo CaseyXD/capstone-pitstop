@@ -10,7 +10,7 @@ if (!isset($_SESSION['username'])) {
 // Pastikan bengkel_id ada di session atau dari parameter URL
 if (isset($_GET['bengkel_id'])) {
     $_SESSION['bengkel_id'] = $_GET['bengkel_id']; // Simpan bengkel_id ke session
-} elseif (!isset($_SESSION['b engkel_id'])) {
+} elseif (!isset($_SESSION['bengkel_id'])) {
     die("Error: Bengkel ID tidak ditemukan. Pastikan Anda sudah login.");
 }
 ?>
@@ -44,19 +44,21 @@ if (isset($_GET['bengkel_id'])) {
         <label for="vehicle_name">Nama Kendaraan:</label>
         <input type="text" id="vehicle_name" name="vehicle_name" required>
 
-        <label for="vehicle_type">Tipe Motor:</label>
+        <label for="vehicle_type">Tipe Kendaraan:</label>
         <select id="vehicle_type" name="vehicle_type" required>
-            <option value="">Pilih Tipe Motor</option>
+            <option value="">Pilih Tipe Kendaraan</option>
             <option value="Manual">Manual</option>
             <option value="Matic">Matic</option>
         </select>
 
+        <label for="booking_date">Tanggal Booking:</label>
+        <input type="date" id="booking_date" name="booking_date" required>
+
+        <label for="booking_time">Waktu Booking:</label>
+        <input type="time" id="booking_time" name="booking_time" required>
+
         <!-- Input tersembunyi untuk bengkel_id -->
         <input type="hidden" name="bengkel_id" value="<?= htmlspecialchars($_SESSION['bengkel_id']) ?>">
-
-        <!-- Menampilkan bengkel_id untuk debugging -->
-        <label for="bengkel_id">Bengkel ID:</label>
-        <input type="text" id="bengkel_id" name="bengkel_id_display" value="<?= htmlspecialchars($_SESSION['bengkel_id']) ?>" readonly>
 
         <button type="submit">Booking</button>
     </form>
