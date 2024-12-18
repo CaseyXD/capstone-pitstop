@@ -8,7 +8,7 @@
     
 </head>
 <body>
-<!-- Testing -->
+
     <!-- Navbar -->
     <div class="navbar">
         <div class="logo-container">
