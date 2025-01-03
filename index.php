@@ -19,7 +19,7 @@
             <button id="cariBengkelButton">Cari Bengkel</button>
             <button>Antrian</button>
             <button>Panduan pengguna</button>
-            <button style="color: #fc4848;" id="">Registrasi</button>
+            <button style="color: #fc4848;" onclick="window.location.href='register.php'">Registrasi</button>
             <!-- <button class="profile-button">👤</button> -->
         </div>
     </div>

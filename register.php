@@ -51,9 +51,9 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         </div>
     </div>
 
-    <h2>Registrasi</h2>
+    <h2 class="center-text">Registrasi</h2>
     <?php if (isset($error)) echo "<p style='color:red;'>$error</p>"; ?>
-    <form method="POST" action="">
+    <form class="form-registrasi" method="POST" action="">
         <label for="username">Username:</label>
         <input type="text" id="username" name="username" required>
         <br>
@@ -69,6 +69,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         <br>
         <button type="submit">Daftar</button>
     </form>
-    <p>Sudah punya akun? <a href="login.php">Login di sini</a></p>
+    <p class="center-text">Sudah punya akun? <a href="login.php">Login di sini</a></p>
 </body>
 </html>
