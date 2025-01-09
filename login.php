@@ -4,10 +4,15 @@ session_start(); // Memulai session
 // Menghubungkan file koneksi database
 include 'config.php'; // Pastikan ini ada di bagian atas
 
-// Cek jika pengguna sudah login, redirect ke halaman explore
-if (isset($_SESSION['username'])) {
-    header("Location: explore.php");
-    exit();
+// Cek jika pengguna sudah login, redirect ke halaman sesuai role
+if (isset($_SESSION['role'])) {
+    if ($_SESSION['role'] === 'bengkel') {
+        header("Location: bengkel_dashboard.php");
+        exit();
+    } elseif ($_SESSION['role'] === 'pengguna') {
+        header("Location: customer_dashboard.php");
+        exit();
+    }
 }
 
 $error = ''; // Inisialisasi variabel error
@@ -17,10 +22,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $username = trim($_POST['username']);
     $password = md5(trim($_POST['password'])); // Hash password menggunakan MD5
 
-    // Debugging: Tampilkan username dan password yang dimasukkan
-    echo "Username: $username, Password: $password<br>"; // Uncomment untuk debugging
-
-    // Cek username dan password
+    // Query untuk cek username dan password
     $sql = "SELECT * FROM users WHERE username = ? AND password = ?";
     $stmt = $conn->prepare($sql);
     
@@ -29,14 +31,19 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $stmt->execute();
         $result = $stmt->get_result();
 
-        // Debugging: Cek jumlah baris yang ditemukan
-        echo "Jumlah baris: " . $result->num_rows . "<br>"; // Uncomment untuk debugging
-
         if ($result->num_rows > 0) {
             $user = $result->fetch_assoc();
             $_SESSION['username'] = $user['username']; // Simpan username di session
             $_SESSION['role'] = $user['role']; // Simpan role di session
-            header("Location: explore.php"); // Redirect ke halaman explore
+
+            // Redirect berdasarkan role
+            if ($user['role'] === 'bengkel') {
+                header("Location: bengkel_dashboard.php");
+            } elseif ($user['role'] === 'pengguna') {
+                header("Location: customer_dashboard.php");
+            } else {
+                header("Location: index.php");
+            }
             exit();
         } else {
             $error = "Username atau password salah!";
@@ -63,8 +70,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         <div class="navbar-buttons">
             <button onclick="window.location.href='index.php'">Beranda</button>
             <button onclick="window.location.href='explore.php'">Cari Bengkel</button>
-            <button onclick="window.location.href='login.php'">Login</button>
-            <button onclick="window.location.href='register.php'">Registrasi</button>
         </div>
     </div>
 

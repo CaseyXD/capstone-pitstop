@@ -1,3 +1,7 @@
+<?php
+session_start(); // Aktifkan session
+?>
+
 <!DOCTYPE html>
 <html lang="id">
 <head>
@@ -9,20 +13,29 @@
 </head>
 <body>
 
-    <!-- Navbar -->
-    <div class="navbar">
-        <div class="logo-container">
-            <img src="images/logo.png" alt="Logo" class="logo"> <!-- Logo di sini -->
+        <!-- Navbar -->
+        <div class="navbar">
+            <div class="logo-container">
+                <img src="images/logo.png" alt="Logo" class="logo">
+            </div>
+            <div class="navbar-buttons">
+                <button onclick="window.location.href='index.php'">Beranda</button>
+                <?php if (!isset($_SESSION['role']) || $_SESSION['role'] !== 'bengkel'): ?>
+                    <button id="cariBengkelButton" onclick="window.location.href='explore.php'">Cari Bengkel</button>
+                <?php endif; ?>
+                <?php if (isset($_SESSION['role']) && $_SESSION['role'] === 'bengkel'): ?>
+                    <button id="bengkel-dashboard-button" onclick="window.location.href='bengkel_dashboard.php'">Dashboard Bengkel</button>
+                <?php endif; ?>
+                <?php if (isset($_SESSION['role']) && $_SESSION['role'] === 'pengguna'): ?>
+                    <button id="customer-dashboard-button" onclick="window.location.href='customer_dashboard.php'">Dashboard</button>
+                <?php endif; ?>
+                <?php if (isset($_SESSION['username'])): ?>
+                    <button id="logout-button" onclick="window.location.href='logout.php'">Logout</button>
+                <?php else: ?>
+                    <button id="logout-button" style="color: #fc4848;" onclick="window.location.href='register.php'">Registrasi</button>
+                <?php endif; ?>
+            </div>
         </div>
-        <div class="navbar-buttons">
-            <button>Beranda</button>
-            <button id="cariBengkelButton">Cari Bengkel</button>
-            <button>Antrian</button>
-            <button>Panduan pengguna</button>
-            <button style="color: #fc4848;" onclick="window.location.href='register.php'">Registrasi</button>
-            <!-- <button class="profile-button">👤</button> -->
-        </div>
-    </div>
     <script src="scripts/script-navigasi_navbar.js"></script>
     <script src="scripts/script-navbar_animation.js"></script>
 
@@ -33,7 +46,13 @@
          <p>Pitstop adalah solusi buat Kamu yang ga mau ribet buat servis kendaraan Kamu. Cukup buka website Pitstop, Kamu bisa cari mekanik pakai gadget Kamu, kapan saja dan dimana saja. Cocok buat kamu yang sayang sama kendaraan Kamu. Cukup booking servis dan hubungi bengkel, Kamu ga perlu susah-susah datang ke lokasi, tinggal antri lalu dilayani.
 
             </p>
-            <a href="#register-banner" class="cta-button">Daftar sekarang</a>
+
+            <p class="center-text">Belum punya akun? <?php if (isset($_SESSION['ROLE']) && $_SESSION['ROLE'] === 'bengkel'): ?>
+                <a class="cta-button" href="bengkel_dashboard.php">Dashboard Bengkel</a>
+            <?php else: ?>
+                <a class="cta-button" href="login.php">Daftar sekarang</a>
+            <?php endif; ?></p>
+
         </div>
         <div class="image-content">
             <img src="images/hero_image.png" alt="Gambar Stock" />
@@ -76,7 +95,11 @@
             <p>
                 Mencari bengkel itu ga mudah. Seringkali udah dapat yang bagus, ternyata diporotin. Tenang, dengan Pitstop, Kamu bisa membandingkan mekanik 1 dengan yang lainnya. Lewat fitur profile bengkel dan review pelanggan, Kamu bisa jadiin referensi sebelum memesan. Ga hanya itu, fitur booking online nya juga mudah. Cukup cari bengkel, klik booking, lalu isi form singkat booking deh! Kamu ga perlu datang kesana untuk menunggu, tinggal datang saja kalo sudah giliranmu.
             </p>
-            <a href="#register-banner" class="cta-button">Bergabung</a>
+
+            <?php if (!isset($_SESSION['username'])): ?>  
+            <a href="register.php" class="cta-button">Bergabung</a>
+            <?php endif; ?>
+
         </div>
     </section>
 

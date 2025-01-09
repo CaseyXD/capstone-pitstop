@@ -46,8 +46,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         <div class="navbar-buttons">
             <button onclick="window.location.href='index.php'">Beranda</button>
             <button onclick="window.location.href='explore.php'">Cari Bengkel</button>
-            <button onclick="window.location.href='login.php'">Login</button>
-            <button onclick="window.location.href='register.php'">Registrasi</button>
         </div>
     </div>
 
@@ -62,7 +60,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         <br>
         <label for="role">Role:</label>
         <select id="role" name="role" required>
-            <option value="admin">Admin</option>
+            <option value="">Pilih Role</option>
             <option value="bengkel">Bengkel</option>
             <option value="pengguna">Pengguna</option>
         </select>

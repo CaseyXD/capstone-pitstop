@@ -25,9 +25,12 @@ if (!isset($_SESSION['username'])) {
         <div class="navbar-buttons">
             <button onclick="window.location.href='index.php'">Beranda</button>
             <button id="cariBengkelButton">Cari Bengkel</button>
-            <button>Antrian</button>
-            <button>Panduan pengguna</button>
-            <button style="color: #fc4848;" href="">Registrasi</button>
+            <?php if (isset($_SESSION['username'])): ?>
+                <button onclick="window.location.href='logout.php'">Logout</button>
+            <?php else: ?>
+                <button style="color: #fc4848;" onclick="window.location.href='register.php'">Registrasi</button>
+                <button onclick="window.location.href='login.php'">Login</button>
+            <?php endif; ?>
         </div>
     </div>
     <script src="scripts/script-navbar_animation.js"></script>
