@@ -13,6 +13,37 @@ if (isset($_GET['bengkel_id'])) {
 } elseif (!isset($_SESSION['bengkel_id'])) {
     die("Error: Bengkel ID tidak ditemukan. Pastikan Anda sudah login.");
 }
+
+// Periksa koneksi database
+if ($conn->connect_error) {
+    die("Koneksi gagal: " . $conn->connect_error);
+}
+
+// Periksa query SQL
+$sql = "INSERT INTO bookings (customer_name, vehicle_name, vehicle_type, booking_date, booking_time, status, bengkel_id) 
+        VALUES (?, ?, ?, ?, ?, 'pending', ?)";
+$stmt = $conn->prepare($sql);
+if (!$stmt) {
+    die("Terjadi kesalahan dalam persiapan query: " . $conn->error);
+}
+
+// Periksa data yang dikirim
+if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+    $customer_name = $_POST['customer_name'];
+    $vehicle_name = $_POST['vehicle_name'];
+    $vehicle_type = $_POST['vehicle_type'];
+    $booking_date = date('Y-m-d');
+    $booking_time = date('H:i:s');
+    $bengkel_id = $_POST['bengkel_id'];
+
+    // Binding parameter untuk query
+    $stmt->bind_param("sssssi", $customer_name, $vehicle_name, $vehicle_type, $booking_date, $booking_time, $bengkel_id);
+
+    // Eksekusi query
+    if (!$stmt->execute()) {
+        die("Terjadi kesalahan saat menyimpan data: " . $stmt->error);
+    }
+}
 ?>
 
 <!DOCTYPE html>
