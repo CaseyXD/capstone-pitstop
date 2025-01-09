@@ -20,6 +20,7 @@ session_start(); // Aktifkan session
             </div>
             <div class="navbar-buttons">
                 <button onclick="window.location.href='index.php'">Beranda</button>
+                <button onclick="window.location.href='bengkel_dashboard.php'">Dashboard Bengkel</button>
                 <?php if (!isset($_SESSION['role']) || $_SESSION['role'] !== 'bengkel'): ?>
                     <button id="cariBengkelButton" onclick="window.location.href='explore.php'">Cari Bengkel</button>
                 <?php endif; ?>
@@ -36,6 +37,7 @@ session_start(); // Aktifkan session
                 <?php endif; ?>
             </div>
         </div>
+
     <script src="scripts/script-navigasi_navbar.js"></script>
     <script src="scripts/script-navbar_animation.js"></script>
 

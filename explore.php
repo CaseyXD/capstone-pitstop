@@ -52,7 +52,7 @@ if (!isset($_SESSION['username'])) {
 
         <!-- Left Filter -->
         <div class="filter-kiri">
-            <h3>Filter Kiri</h3>
+            <!-- <h3>Filter Kiri</h3>
             <form action="explore.php" method="get">
                 <label for="filter1">Filter 1:</label>
                 <select id="filter1" name="filter1">
@@ -69,7 +69,7 @@ if (!isset($_SESSION['username'])) {
                 </select>
 
                 <button type="submit">Terapkan Filter</button>
-            </form>
+            </form> -->
         </div>
 
     <!-- Results -->
@@ -135,7 +135,7 @@ if (!isset($_SESSION['username'])) {
 
         <!-- Right Filter -->
         <div class="right-filter">
-            <h3>Filter Kanan</h3>
+            <!-- <h3>Filter Kanan</h3>
             <form action="explore.php" method="get">
                 <label for="filter1">Filter 1:</label>
                 <select id="filter1" name="filter1">
@@ -152,7 +152,7 @@ if (!isset($_SESSION['username'])) {
                 </select>
 
                 <button type="submit">Terapkan Filter</button>
-            </form>
+            </form> -->
         </div>
 
     <script src="scripts/script-navigasi_navbar.js"></script>
