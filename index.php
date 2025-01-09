@@ -47,11 +47,10 @@ session_start(); // Aktifkan session
 
             </p>
 
-            <p class="center-text">Belum punya akun? <?php if (isset($_SESSION['ROLE']) && $_SESSION['ROLE'] === 'bengkel'): ?>
-                <a class="cta-button" href="bengkel_dashboard.php">Dashboard Bengkel</a>
-            <?php else: ?>
-                <a class="cta-button" href="login.php">Daftar sekarang</a>
-            <?php endif; ?></p>
+            <?php if (!isset($_SESSION['username'])): ?>       
+                <a href="register.php" class="cta-button">Daftar sekarang</a>
+            <?php endif; ?>
+
 
         </div>
         <div class="image-content">
