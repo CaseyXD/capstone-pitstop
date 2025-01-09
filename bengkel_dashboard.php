@@ -241,11 +241,10 @@ body {
         <div class="logo">BengkelKu</div>
         <nav>
             <ul class="nav-links">
-                <li><a href="#">Beranda</a></li>
-                <li><a href="#">Profil</a></li>
+                <li><a href="index.php">Beranda</a></li>
                 <li><a href="#">Pesanan</a></li>
                 <li><a href="#">Layanan</a></li>
-                <li><a href="#">Keluar</a></li>
+                <li><a href="logout.php">Keluar</a></li>
             </ul>
         </nav>
     </header>
