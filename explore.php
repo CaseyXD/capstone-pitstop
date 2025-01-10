@@ -97,8 +97,8 @@ if (!isset($_SESSION['username'])) {
                 while ($row = $result->fetch_assoc()) {
                     // Tambahkan link ke booking.php dengan bengkel_id sebagai parameter
                     echo "<div class='grid-item-pencarian'>";
-                    echo "<a href='form.php?bengkel_id=" . htmlspecialchars($row["id"]) . "'>" . htmlspecialchars($row["nama"]) . "</a>";
-                    echo "<br><strong>Bengkel ID:</strong> <a href='form.php?bengkel_id=" . htmlspecialchars($row["id"]) . "'>" . htmlspecialchars($row["id"]) . "</a>";
+                    echo "<a href='booking.php?bengkel_id=" . htmlspecialchars($row["id"]) . "'>" . htmlspecialchars($row["nama"]) . "</a>";
+                    echo "<br><strong>Bengkel ID:</strong> <a href='booking.php?bengkel_id=" . htmlspecialchars($row["id"]) . "'>" . htmlspecialchars($row["id"]) . "</a>";
                     echo "</div>";
                     
                 }
@@ -120,8 +120,8 @@ if (!isset($_SESSION['username'])) {
                 while ($row = $result->fetch_assoc()) {
                     // Tambahkan link ke booking.php dengan bengkel_id sebagai parameter
                     echo "<div class='grid-item-pencarian'>";
-                    echo "<a href='form.php?bengkel_id=" . htmlspecialchars($row["id"]) . "'>" . htmlspecialchars($row["nama"]) . "</a>";
-                    echo "<br><strong>Bengkel ID:</strong> <a href='form.php?bengkel_id=" . htmlspecialchars($row["id"]) . "'>" . htmlspecialchars($row["id"]) . "</a>";
+                    echo "<a href='booking.php?bengkel_id=" . htmlspecialchars($row["id"]) . "'>" . htmlspecialchars($row["nama"]) . "</a>";
+                    echo "<br><strong>Bengkel ID:</strong> <a href='booking.php?bengkel_id=" . htmlspecialchars($row["id"]) . "'>" . htmlspecialchars($row["id"]) . "</a>";
                     echo "</div>";
                     
                 }
